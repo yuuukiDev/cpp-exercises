@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void loanInstallement() {
+void loanInstallment() {
     double loanAmount, monthlyPayment, totalMonths;
     cin >> loanAmount >> monthlyPayment;
     totalMonths = loanAmount / monthlyPayment;
@@ -13,5 +13,5 @@ void loanInstallement() {
 
 int main () {
     cout << "Enter loan amount and monthly payment to calculate how many months to settle the loan" << endl;
-    loanInstallement();
+    loanInstallment();
 }
