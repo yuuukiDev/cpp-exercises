@@ -3,11 +3,26 @@
 using namespace std;
 
 void totalSales() {
-    int sales, percentage;
+    int sales, commissionRate, comissionAmount; 
+
     cin >> sales;
-    if (sales > 1000000) {
-        percentage = 0.1;
+
+    if (sales >= 10000000) {
+        commissionRate = 1;
     } else if (sales >= 500000) {
-        percentage = 0.2;
+        commissionRate = 2;
+    } else if (sales >= 100000) {
+        commissionRate = 3;
+    } else if (sales >= 50000) {
+        commissionRate = 4;
+    } else {
+        commissionRate = 0;
     }
+    comissionAmount = sales * commissionRate / 100;
+    cout << "The commission amount is: $" << comissionAmount << endl;
+}
+
+int main () {
+    cout << "Enter sales: " << endl;
+    totalSales();
 }
